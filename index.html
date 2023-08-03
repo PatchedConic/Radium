@@ -35,21 +35,27 @@
                     <div class="file_button_group">
                         <button class="action_button">
                             <span class="material-symbols-outlined">
-                                add
+                                edit_note
                             </span>
-                            <span class="tooltip">New notebook</span>                            
+                            <span class="tooltip">Text cell</span>                            
                         </button>
                         <button class="action_button">
                             <span class="material-symbols-outlined">
-                                save
+                                function
                             </span> 
-                            <span class="tooltip">Save notebook</span>                           
+                            <span class="tooltip">Math cell</span>                           
                         </button>
                         <button class="action_button">
                             <span class="material-symbols-outlined">
-                                folder_open
+                                code
                             </span>
-                            <span class="tooltip">Open notebook</span>
+                            <span class="tooltip">Code cell</span>
+                        </button>
+                        <button class="action_button">
+                            <span class="material-symbols-outlined">
+                                insights
+                            </span>
+                            <span class="tooltip">Plot</span>
                         </button>
                     </div>
                     <div class="config_button_group">
@@ -68,8 +74,15 @@
                     </div>
                 </div>
                 <div class="document_window">
-                    <div class="ribbon"></div>
-                    <div class="document"></div>
+                    <div class="ribbon" id="text">Text</div>
+                    <div class="ribbon" id="math">Math</div>
+                    <div class="ribbon" id="graph">Graph</div>
+                    <div class="ribbon" id="code">Code</div>
+                    <div class="doc">
+                        <h1>Radium Notebook</h1>
+                        Welcome to Radium Notebook. 
+                        New here? Click <a href="">here</a> for a walkthrough!
+                    </div>
                 </div>
             </div>
         </div>
