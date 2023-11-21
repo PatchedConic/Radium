@@ -24,38 +24,76 @@
 <body>
     <div class="application">
         <div class="title_bar">
-            <button class="title_bar_button">File</button>
-            <button class="title_bar_button">Edit</button>
-            <button class="title_bar_button">Insert</button>
-            <button class="title_bar_button">Help</button>
+            <div>
+                <button class="title_bar_button" onclick="toggleFileDropdown()">File</button>
+                    <div class="title_bar_dropdown" id="file_dropdown">
+                        <div class="title_bar_dropdown_items">Hello</div>
+                        <div class="title_bar_dropdown_items">World</div>
+                </div>
+            </div>
+            <div>
+                <button class="title_bar_button" onclick="toggleEditDropdown()">Edit</button>
+                <div class="title_bar_dropdown" id="edit_dropdown">
+                    <div class="title_bar_dropdown_items">Edit</div>
+                    <div class="title_bar_dropdown_items">Dropdown</div>
+                </div>
+            </div>
+            <div>
+                <button class="title_bar_button" onclick="toggleInsertDropdown()">Insert</button>
+                <div class="title_bar_dropdown" id="insert_dropdown">
+                    <div class="title_bar_dropdown_items">Insert</div>
+                    <div class="title_bar_dropdown_items">Dropdown</div>
+                </div>
+            </div>
+            <div>
+                <button class="title_bar_button" onclick="toggleHelpDropdown()">Help</button>
+                <div class="title_bar_dropdown" id="help_dropdown">
+                    <div class="title_bar_dropdown_items">Help</div>
+                    <div class="title_bar_dropdown_items">Dropdown</div>
+                </div>
+            </div>
         </div>
-        <div class="window">
-            <div class="doc_window">
-                <div class="action_bar">
-                    <div class="file_button_group">
-                        <button class="action_button">
+        <div class="main_window">
+            <div class="sub_window">
+                <div class="action_bar" id="action_bar">
+                    <div class="action_button_group">
+                        <button class="action_button" id="new_document" onclick="new_document()">
+                        <span class="material-symbols-outlined">add</span>
+                        <span class="tooltip">New Notebook</span>
+                        </button>
+                        <button class="action_button" id="save_document" onclick="save_document()">
+                            <span class="material-symbols-outlined">save</span>
+                            <span class="tooltip">Save Notebook</span>
+                            </button>
+                        <button class="action_button" id="text_cell" onclick="text_focus()">
                             <span class="material-symbols-outlined">
                                 edit_note
                             </span>
                             <span class="tooltip">Text cell</span>                            
                         </button>
-                        <button class="action_button">
+                        <button class="action_button" id="math_cell" onclick="math_focus()">
                             <span class="material-symbols-outlined">
                                 function
                             </span> 
                             <span class="tooltip">Math cell</span>                           
                         </button>
-                        <button class="action_button">
+                        <button class="action_button" id="code_cell" onclick="code_focus()">
                             <span class="material-symbols-outlined">
                                 code
                             </span>
                             <span class="tooltip">Code cell</span>
                         </button>
-                        <button class="action_button">
+                        <button class="action_button" id="graph_cell" onclick="graph_focus()">
                             <span class="material-symbols-outlined">
                                 insights
                             </span>
                             <span class="tooltip">Plot</span>
+                        </button>
+                        <button class="action_button" id="attachments">
+                            <span class="material-symbols-outlined">
+                                attach_file
+                            </span>
+                            <span class="tooltip">Attachments</span>
                         </button>
                     </div>
                     <div class="config_button_group">
@@ -74,14 +112,15 @@
                     </div>
                 </div>
                 <div class="document_window">
-                    <div class="ribbon" id="text">Text</div>
-                    <div class="ribbon" id="math">Math</div>
-                    <div class="ribbon" id="graph">Graph</div>
-                    <div class="ribbon" id="code">Code</div>
-                    <div class="doc">
-                        <h1>Radium Notebook</h1>
+                    <div class="ribbon" id="text_ribbon">Text</div>
+                    <div class="ribbon" id="math_ribbon">Math</div>
+                    <div class="ribbon" id="code_ribbon">Code</div>
+                    <div class="ribbon" id="graph_ribbon">Graph</div>
+                    <div class="document_background">
+                        <!-- <h1>Radium Notebook</h1>
                         Welcome to Radium Notebook. 
-                        New here? Click <a href="">here</a> for a walkthrough!
+                        New here? Click <a href="">here</a> for a walkthrough! -->
+                        <button onclick="foo()">click me!</button>
                     </div>
                 </div>
             </div>
@@ -90,5 +129,6 @@
             Radium Notebook
         </div>
     </div>
+    <script src="action_buttons.js"></script>
 </body>
 </html>
