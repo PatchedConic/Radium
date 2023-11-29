@@ -169,12 +169,16 @@ body {
     color: var(--fg-color);
     position: absolute;
     z-index: 1;
+    border: var(--border-color) solid 2px;
 }
 
 .title_bar_dropdown_items {
     padding: 10px;
+    font-size: 16px;
     display: block;
     color: var(--fg-color);
+    background-color: var(--bg-color);
+    border: none;
 }
 
 .title_bar_dropdown_items:hover {
